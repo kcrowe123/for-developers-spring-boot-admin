@@ -14,7 +14,10 @@ public class HelloService {
 
 
     public String hello() {
-        var response = greetingRepository.save(new Greeting("Hello"));
-        return response.getMessage();
+        if(greetingRepository.count() < 1) {
+            var response = greetingRepository.save(new Greeting("Hello"));
+            return response.getMessage();
+        }
+        return greetingRepository.findAll().get(0).getMessage();
     }
 }
