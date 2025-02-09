@@ -1,5 +1,0 @@
-rootProject.name = 'demo'
-include 'spring-boot-admin-server'
-include 'simple-microservice'
-include 'simple-microservice2'
-include 'simple-microservice3'
